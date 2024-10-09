@@ -73,7 +73,7 @@ const Home = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 pb-20 pt-8">
+    <div className="container mx-auto px-4 pb-20 pt-6">
       <h1 className="text-3xl font-bold mb-6 text-center">
         Free Classrooms Right Now
       </h1>

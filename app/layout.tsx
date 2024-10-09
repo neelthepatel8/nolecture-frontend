@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,8 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-inter`}
       >
+        <Image
+          className="fixed top-4 left-8"
+          src="/husky.png"
+          width="45"
+          height="45"
+          alt=""
+        />
         {children}
         <div className="fixed top-4 right-4 h-12 flex  cursor-pointer flex-row items-center justify-center gap-4 ">
           Work In Progress by Neel
