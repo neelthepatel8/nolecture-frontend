@@ -45,10 +45,12 @@ const Home = () => {
         classrooms.filter((classroom) => classroom.next_lecture_time != null)
       );
     } else {
-      const filtered = classrooms.filter((classroom) =>
-        classroom.building_name
-          .toLowerCase()
-          .includes(buildingFilter.toLowerCase())
+      const filtered = classrooms.filter(
+        (classroom) =>
+          classroom.building_name
+            .toLowerCase()
+            .includes(buildingFilter.toLowerCase()) &&
+          classroom.next_lecture_time != null
       );
       setFilteredClassrooms(filtered);
     }
