@@ -41,7 +41,9 @@ const Home = () => {
 
   useEffect(() => {
     if (buildingFilter === "") {
-      setFilteredClassrooms(classrooms);
+      setFilteredClassrooms(
+        classrooms.filter((classroom) => classroom.next_lecture_time != null)
+      );
     } else {
       const filtered = classrooms.filter((classroom) =>
         classroom.building_name
